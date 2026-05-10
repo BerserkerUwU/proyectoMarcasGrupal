@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/login.css">
+  <link rel="shortcut icon" href="./img/logo.PNG" type="image/x-icon">
+  <!-- Librerias de iconos https://ionic.io/ionicons/usage -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <title>H&H</title>
+</head>
+
+<body class="body1">
+
+  <div id="contenedor">
+    <!-- menu navegacion -->
+    <nav class="barra-navegacion">
+      <div class="contenido-nav">
+        <a href="../index.html" class="logo-nav">
+          <!-- escudo logo-->
+          <img class="escudo-logo" src="../img/logo.PNG" alt="">
+          <span class="nombre-marca">Heritage & Horsepower</span>
+        </a>
+        <ul class="menu-principal">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="./ventas.html">Ventas</a></li>
+          <li><a href="./noticias.html">Noticias</a></li>
+          <li>
+            <a href="#">Sobre Nosotros</a>
+            <ul>
+
+              <li><a href="./opiniones.html">Opiniones</a></li>
+              <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="iconos-nav">
+          <a href="#"><ion-icon name="search-outline"></ion-icon></a>
+          <a href="./login.html" class="activo"><ion-icon name="person-outline"></ion-icon></a>
+          <a href="#"><ion-icon name="cart-outline"></ion-icon></a>
+        </div>
+      </div>
+    </nav>
+
+    <!--Caja de login-->
+    <div class="Caja">
+
+      <div class="Izquierda">
+        <h2>Inicia Sesión</h2>
+
+        <div class="Icono"><img src="../img/usuario.png" alt=""></div>
+
+        <form action="#" method="POST">
+          <input type="text" name="usuario" placeholder="USUARIO" required>
+          <input type="password" name="password" placeholder="CONTRASEÑA" required>
+          <button type="submit">LOGIN</button>
+        </form>
+
+        <p class="Links">
+          <a href="#">Recuperar Contraseña</a> |
+          <a href="#">Registrar</a>
+        </p>
+      </div>
+
+      <div class="Derecha">
+        <video autoplay muted loop playsinline class="Video">
+          <source src="../videos/video.mp4" type="video/mp4">
+        </video>
+
+        <div class="TextoEncima">
+          <h1>BIENVENIDO</h1>
+          <p>Inicia sesión para acceder a tu cuenta</p>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- footer -->
+    <footer class="pie-pagina">
+        © 2026 Todos los derechos reservados a Heritage & Horsepower
+    </footer>
+
+  </div>
+</body>
+
+</html>

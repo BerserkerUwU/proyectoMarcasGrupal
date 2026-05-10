@@ -1,0 +1,522 @@
+@import url(https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Raleway:wght@300;400;500&display=swap);
+
+/*Cambio de FONT - LUCIA*/
+@font-face {
+  font-family: "carrera";
+  src: url(../fonts/LEMONMILK-Regular.otf);
+}
+
+:root {
+  /* Colores principales */
+  --color-principal: #111111;
+  --color-superf-tarjetas: #9b9b9b;
+
+  /* Colores de botones e iconos */
+  --color-efectos: #c1121f;
+  --color-bordes: rgba(252, 230, 110, 0.863);
+  --color-enlaces-y-hovers: #1e5eff;
+
+  /* Colores de textos y titulos */
+  --color-textos-titulos: #f5f5f5;
+  --color-palabras-clave: rgba(250, 214, 95, 0.863);
+  --color-texto-secundario: rgba(245, 245, 245, 0.7);
+
+  --negro: #0a0a0a;
+  --gris-oscuro: #111111;
+  --gris-medio: #1c1c1c;
+  --gris-borde: #2a2a2a;
+  --dorado: #c8922a;
+  --dorado-claro: #e0a83a;
+  --blanco: #f5f5f5;
+  --blanco-tenue: #cccccc;
+  --fuente-titulo: 'Cinzel', serif;
+  --fuente-cuerpo: 'Raleway', sans-serif;
+}
+
+body {
+  background-color: var(--color-principal);
+  font-family: carrera;
+}
+
+/* Ajuste global */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*      Menu de navegacion
+══════════════════════════════ */
+.logo {
+  width: 10%;
+}
+
+.barra-navegacion {
+  background-color: var(--negro);
+  border-bottom: 1px solid var(--gris-borde);
+  padding: 0 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.contenido-nav {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.logo-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.escudo-logo {
+  width: 70px;
+  height: 50px;
+}
+
+.nombre-marca {
+  font-family: var(--fuente-titulo);
+  color: var(--dorado);
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+}
+
+.menu-principal {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+}
+
+.menu-principal a {
+  font-family: var(--fuente-cuerpo);
+  color: var(--blanco-tenue);
+  text-decoration: none;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: color 0.25s;
+}
+
+.menu-principal a:hover,
+.menu-principal a.activo {
+  color: var(--dorado);
+}
+
+/*     menu desplegable
+══════════════════════════════ */
+.menu-principal li {
+  position: relative;
+}
+
+.menu-principal li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 160px;
+  background-color: var(--gris-borde);
+  border: 1px solid var(--gris-borde);
+  list-style: none;
+  z-index: 101;
+}
+
+.menu-principal li:hover>ul {
+  display: block;
+}
+
+.menu-principal li ul a {
+  display: block;
+  padding: 0.65rem 1.1rem;
+  font-size: 0.78rem;
+  color: var(--blanco-tenue);
+  text-decoration: none;
+  transition: color 0.25s;
+}
+
+.menu-principal li ul a:hover {
+  color: var(--dorado-claro);
+  background-color: var(--gris-medio);
+}
+
+
+/*      iconos de navegacion 
+══════════════════════════════*/
+.iconos-nav {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.iconos-nav a {
+  color: var(--blanco-tenue);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: color 0.25s;
+}
+
+.iconos-nav ion-icon {
+  font-size: 22px;
+}
+
+.iconos-nav a:hover {
+  color: var(--dorado);
+}
+
+/*EFECTO GRADIENT - TEXTRO BIENVENIDO*/
+@keyframes gradientFlow {
+  from { background-position: 0% center; }
+  to { background-position: 200% center; }
+}
+
+.principal h1 {
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  left: 30%;
+  font-size: 7.5rem;
+  font-style: italic;
+
+  /* Colores del gradiente */
+  background: linear-gradient(90deg, #c8922a, #ffffff, #c8922a);
+  background-size: 200% auto; /* Hace que el gradiente sea el doble de ancho */
+  
+  /* 2. Hacemos que el color se meta DENTRO de las letras */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* El texto debe ser transparente para ver el fondo */
+
+  /* 3. Activamos la animación */
+  animation: gradientFlow 6s linear infinite;
+}
+
+
+/*VIDEO*/
+.coche-fondo {
+  width: 100%;
+
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  background-position: center;
+
+}
+
+.pie-pagina {
+  background-color: var(--negro);
+  border-top: 1px solid var(--gris-borde);
+  text-align: center;
+  padding: 1.25rem 2rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blanco-tenue);
+}
+
+
+/*
+   - movil vertical:      hasta 480px
+   - movil horizontal:    481px – 767px
+   - tablet vertical:        768px – 1023px
+   - tablet horizontal:      1024px – 1299px
+   - escritorio ancho fijo:     >= 1300px
+   =============================================*/
+
+
+/* ──────────────────────────────────────────────
+   movil en vertical  (<= 480px)
+   ────────────────────────────────────────────── */
+@media screen and (max-width: 480px) {
+  .contenido-nav {
+    flex-direction: column;
+    height: auto;
+    padding: 0.75rem 0;
+    gap: 0.6rem;
+  }
+  .logo-nav {
+    justify-content: center;
+  }
+  .escudo-logo {
+    width: 50px;
+    height: 36px;
+  }
+  .nombre-marca {
+    font-size: 0.9rem;
+  }
+  /* menu principal */
+  .menu-principal {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    align-items: center;
+  }
+  .menu-principal li {
+    width: 100%;
+    text-align: center;
+  }
+  .menu-principal a {
+    display: block;
+    padding: 0.5rem 0;
+    font-size: 0.72rem;
+  }
+  /* Submenu desplegable */
+  .menu-principal li ul {
+    position: static;
+    min-width: 100%;
+    border: none;
+    background-color: var(--gris-medio);
+  }
+
+  /* Iconos de navegacion */
+  .iconos-nav {
+    justify-content: center;
+    padding: 0.5rem 0;
+  }
+
+  .iconos-nav ion-icon {
+    font-size: 20px;
+  }
+
+  /* Título principal: tamaño reducido y centrado */
+  .principal h1 {
+    font-size: 2.8rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  /* Vídeo: cubre toda la pantalla */
+  .coche-fondo {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  /* Footer: texto algo más pequeño */
+  .pie-pagina {
+    font-size: 0.6rem;
+    padding: 1rem;
+  }
+}
+
+
+/* ──────────────────────────────────────────────
+   movil en horizontal  (481px – 767px)
+   ────────────────────────────────────────────── */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+
+  /* Navegacion fila compacta */
+  .contenido-nav {
+    height: 58px;
+    padding: 0 1rem;
+  }
+
+  .escudo-logo {
+    width: 55px;
+    height: 40px;
+  }
+
+  .nombre-marca {
+    font-size: 0.95rem;
+  }
+
+  .menu-principal {
+    gap: 1.2rem;
+  }
+
+  .menu-principal a {
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+  }
+
+  /* Submenú desplegable */
+  .menu-principal li ul {
+    position: absolute;
+  }
+
+  .iconos-nav ion-icon {
+    font-size: 20px;
+  }
+
+  /* Título: tamaño intermedio, ligeramente desplazado */
+  .principal h1 {
+    font-size: 4rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  /* Vídeo */
+  .coche-fondo {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  .pie-pagina {
+    font-size: 0.65rem;
+    padding: 1rem 1.5rem;
+  }
+}
+
+
+/* ──────────────────────────────────────────────
+   tablet en vertical  (768px – 1023px)
+   ────────────────────────────────────────────── */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  /* Navegación: altura estándar, padding ajustado */
+  .contenido-nav {
+    height: 65px;
+    padding: 0 1.5rem;
+  }
+
+  .escudo-logo {
+    width: 62px;
+    height: 46px;
+  }
+
+  .nombre-marca {
+    font-size: 1rem;
+  }
+
+  /* Menú principal: separación moderada */
+  .menu-principal {
+    gap: 1.6rem;
+  }
+
+  .menu-principal a {
+    font-size: 0.74rem;
+    letter-spacing: 0.1em;
+  }
+
+  .iconos-nav {
+    gap: 1rem;
+  }
+
+  .iconos-nav ion-icon {
+    font-size: 21px;
+  }
+
+  /* Título: tamaño mediano, centrado verticalmente */
+  .principal h1 {
+    font-size: 5.5rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  /* Vídeo */
+  .coche-fondo {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  .pie-pagina {
+    font-size: 0.68rem;
+    padding: 1.1rem 1.75rem;
+  }
+}
+
+
+/* ──────────────────────────────────────────────
+   tablet en horizontal  (1024px – 1299px)
+   ────────────────────────────────────────────── */
+@media screen and (min-width: 1024px) and (max-width: 1299px) {
+
+  /* Navegación: prácticamente idéntica al escritorio
+     pero con padding lateral algo menor */
+  .contenido-nav {
+    height: 68px;
+    padding: 0 1.75rem;
+  }
+
+  .escudo-logo {
+    width: 66px;
+    height: 48px;
+  }
+
+  .nombre-marca {
+    font-size: 1.08rem;
+  }
+
+  .menu-principal {
+    gap: 2rem;
+  }
+
+  .menu-principal a {
+    font-size: 0.76rem;
+  }
+
+  .iconos-nav ion-icon {
+    font-size: 22px;
+  }
+
+  /* Título: casi en tamaño completo, posición ligeramente centrada */
+  .principal h1 {
+    font-size: 6.5rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  /* Vídeo */
+  .coche-fondo {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  .pie-pagina {
+    font-size: 0.69rem;
+    padding: 1.2rem 2rem;
+  }
+}
+
+
+/* ──────────────────────────────────────────────
+   escritorio ancho fijo  (>= 1300px)
+   ────────────────────────────────────────────── */
+
+@media screen and (min-width: 1300px) {
+  #contenedor {
+    width: 1300px;
+    margin: 0 auto;
+    width: auto;
+  }
+
+  /* El título recupera su posición y tamaño originales */
+  .principal h1 {
+    font-size: 7.5rem;
+    left: 30%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: left;
+  }
+
+  /* Vídeo a ancho completo */
+  .coche-fondo {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+}

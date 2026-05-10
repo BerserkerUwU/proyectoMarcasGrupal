@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/ventas.css">
+    <!-- linreria iconos -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>Ventas – Heritage & Horsepower</title>
+
+</head>
+
+<body>
+
+    <!--menu navegacion -->
+    <nav class="barra-navegacion">
+        <div class="contenido-nav">
+            <a href="../index.html" class="logo-nav">
+                <!-- escudo logo-->
+                <img class="escudo-logo" src="../img/logo.PNG" alt="">
+                <span class="nombre-marca">Heritage &amp; Horsepower</span>
+            </a>
+            <ul class="menu-principal">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./ventas.html" class="activo">Ventas</a></li>
+                <li><a href="./noticias.html">Noticias</a></li>
+                <li>
+                  <a href="#">Sobre Nosotros</a>
+                  <ul>
+                            
+                            <li><a href="./opiniones.html">Opiniones</a></li>
+                            <li><a href="./contacto.html">Contacto</a></li>
+                        </ul>
+                </li>
+            </ul>
+            <div class="iconos-nav">
+                <a href="#"><ion-icon name="search-outline"></ion-icon></a>
+                <a href="./login.html"><ion-icon name="person-outline"></ion-icon></a>
+                <a href="#"><ion-icon name="cart-outline"></ion-icon></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ══ CABECERA ══ -->
+    <header class="cabecera-ventas">
+        <p class="etiqueta-seccion">Colección Exclusiva</p>
+        <h1 class="titulo-seccion">Vehículos en Venta</h1>
+        <p class="subtitulo-seccion">Selección de los automóviles más extraordinarios del mercado</p>
+    </header>
+
+    <!-- ══ FILTROS ══ -->
+    <section class="barra-filtros">
+        <div class="contenido-filtros">
+            <div class="grupo-filtros">
+                <button class="boton-filtro activo">Todos</button>
+                <button class="boton-filtro">Superdeportivos</button>
+                <button class="boton-filtro">Gran Turismo</button>
+                <button class="boton-filtro">Clásicos</button>
+                <button class="boton-filtro">SUV Lujo</button>
+            </div>
+            <select class="selector-orden">
+                <option>Ordenar: Destacados</option>
+                <option>Precio: menor a mayor</option>
+                <option>Precio: mayor a menor</option>
+                <option>Año: más reciente</option>
+            </select>
+        </div>
+    </section>
+
+    <!-- ══ CATÁLOGO ══ -->
+    <main class="seccion-catalogo">
+        <div class="cuadricula-vehiculos">
+
+            <!-- Tarjeta 1 -->
+            <article class="tarjeta-vehiculo">
+                <div class="contenedor-imagen">
+                    <img class="imagen-vehiculo"
+                        src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=700&q=80"
+                        alt="Lamborghini Huracán STO" loading="lazy" />
+                    <span class="insignia-estado insignia-disponible">Disponible</span>
+                    <div class="contador-imagenes">
+                        <ion-icon name="image-outline"></ion-icon>
+                        24 fotos
+                    </div>
+                </div>
+                <div class="cuerpo-tarjeta">
+                    <p class="marca-vehiculo">Lamborghini</p>
+                    <h2 class="nombre-vehiculo">Huracán STO</h2>
+                    <p class="variante-vehiculo">2023 · 6.400 km · Coupé</p>
+                    <div class="especificaciones-rapidas">
+                        <div class="item-especificacion">
+                            <span class="valor-especificacion">640</span>
+                            <span class="etiqueta-especificacion">CV</span>
+                        </div>
+                        <div class="item-especificacion">
+                            <span class="valor-especificacion">3,0s</span>
+                            <span class="etiqueta-especificacion">0–100</span>
+                        </div>
+                        <div class="item-especificacion">
+                            <span class="valor-especificacion">310</span>
+                            <span class="etiqueta-especificacion">Km/h máx</span>
+                        </div>
+                    </div>
+                    <div class="pie-tarjeta">
+                        <div class="precio-vehiculo">
+                            <span>Precio</span>
+                            398.000 €
+                        </div>
+                        <button class="boton-detalle">Ver detalle</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tarjeta 2 -->
+            <article class="tarjeta-vehiculo">
+                <div class="contenedor-imagen">
+                    <img class="imagen-vehiculo"
+                        src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?w=700&q=80"
+                        alt="Ferrari SF90 Stradale" loading="lazy" />
+                    <span class="insignia-estado insignia-exclusivo">Exclusivo</span>
+                    <div class="contador-imagenes">
+                        <ion-icon name="image-outline"></ion-icon>
+                        31 fotos
+                    </div>
+                </div>
+                <div class="cuerpo-tarjeta">
+                    <p class="marca-vehiculo">Ferrari</p>
+                    <h2 class="nombre-vehiculo">SF90 Stradale</h2>
+                    <p class="variante-vehiculo">2022 · 1.200 km · Híbrido enchufable</p>
+                    <div class="especificaciones-rapidas">
+                        <div class="item-especificacion">
+                            <span class="valor-especificacion">1.000</span>
+                            <span class="etiqueta-especificacion">CV</span>
+                        </div>
+                        <div class="item-especificacion">
+                            <span class="valor-especificacion">2,5s</span>
+                            <span class="etiqueta-especificacion">0–100</span>
+                        </div>
+                        <div class="item-especificacion">
+                            <span class="valor-especificacion">340</span>
+                            <span class="etiqueta-especificacion">Km/h máx</span>
+                        </div>
+                    </div>
+                    <div class="pie-tarjeta">
+                        <div class="precio-vehiculo">
+                            <span>Precio</span>
+                            589.000 €
+                        </div>
+                        <button class="boton-detalle">Ver detalle</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tarjeta 3 -->
+            <article class="tarjeta-vehiculo">
+                <div class="contenedor-imagen">
+                    <img class="imagen-vehiculo"
+                        src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=700&q=80"
+                        alt="Porsche 911 GT3 RS" loading="lazy" />
+                    <span class="insignia-estado insignia-reservado">Reservado</span>
+                    <div class="contador-imagenes">
+                        <ion-icon name="image-outline"></ion-icon>
+                        18 fotos
+                    </div>
+                </div>
+                <div class="cuerpo-tarjeta">
+                    <p class="marca-vehiculo">Porsche</p>
+                    <h2 class="nombre-vehiculo">911 GT3 RS</h2>
+                    <p class="variante-vehiculo">2023 · 3.100 km · Coupé</p>
+                    <div class="especificaciones-rapidas">
+                        <div class="item-especificacion">
+                            <span class="valor-especificacion">525</span>
+                            <span class="etiqueta-especificacion">CV</span>
+                        </div>
+                        <div class="item-especificacion">
+                            <span class="valor-especificacion">3,2s</span>
+                            <span class="etiqueta-especificacion">0–100</span>
+                        </div>
+                        <div class="item-especificacion">
+                            <span class="valor-especificacion">296</span>
+                            <span class="etiqueta-especificacion">Km/h máx</span>
+                        </div>
+                    </div>
+                    <div class="pie-tarjeta">
+                        <div class="precio-vehiculo">
+                            <span>Precio</span>
+                            274.000 €
+                        </div>
+                        <button class="boton-detalle">Ver detalle</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tarjeta 4 -->
+            <article class="tarjeta-vehiculo">
+                <div class="contenedor-imagen">
+                    <img class="imagen-vehiculo"
+                        src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=700&q=80" alt="McLaren 720S"
+                        loading="lazy" />
+                    <span class="insignia-estado insignia-disponible">Disponible</span>
+                    <div class="contador-imagenes">
+                       <ion-icon name="image-outline"></ion-icon>
+                        27 fotos
+                    </div>
+                </div>
+                <div class="cuerpo-tarjeta">
+                    <p class="marca-vehiculo">McLaren</p>
+                    <h2 class="nombre-vehiculo">720S Spider</h2>
+                    <p class="variante-vehiculo">2021 · 9.800 km · Descapotable</p>
+                    <div class="especificaciones-rapidas">
+                        <div class="item-especificacion">
+                            <span class="valor-especificacion">720</span>
+                            <span class="etiqueta-especificacion">CV</span>
+                        </div>
+                        <div class="item-especificacion">
+                            <span class="valor-especificacion">2,9s</span>
+                            <span class="etiqueta-especificacion">0–100</span>
+                        </div>
+                        <div class="item-especificacion">
+                            <span class="valor-especificacion">341</span>
+                            <span class="etiqueta-especificacion">Km/h máx</span>
+                        </div>
+                    </div>
+                    <div class="pie-tarjeta">
+                        <div class="precio-vehiculo">
+                            <span>Precio</span>
+                            319.000 €
+                        </div>
+                        <button class="boton-detalle">Ver detalle</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tarjeta 5 -->
+            <article class="tarjeta-vehiculo">
+                <div class="contenedor-imagen">
+                    <img class="imagen-vehiculo"
+                        src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?w=700&q=80"
+                        alt="Bentley Continental GT" loading="lazy" />
+                    <span class="insignia-estado insignia-disponible">Disponible</span>
+                    <div class="contador-imagenes">
+                        <ion-icon name="image-outline"></ion-icon>
+                        22 fotos
+                    </div>
+                </div>
+                <div class="cuerpo-tarjeta">
+                    <p class="marca-vehiculo">Bentley</p>
+                    <h2 class="nombre-vehiculo">Continental GT Speed</h2>
+                    <p class="variante-vehiculo">2022 · 14.200 km · Gran Turismo</p>
+                    <div class="especificaciones-rapidas">
+                        <div class="item-especificacion">
+                            <span class="valor-especificacion">659</span>
+                            <span class="etiqueta-especificacion">CV</span>
+                        </div>
+                        <div class="item-especificacion">
+                            <span class="valor-especificacion">3,6s</span>
+                            <span class="etiqueta-especificacion">0–100</span>
+                        </div>
+                        <div class="item-especificacion">
+                            <span class="valor-especificacion">335</span>
+                            <span class="etiqueta-especificacion">Km/h máx</span>
+                        </div>
+                    </div>
+                    <div class="pie-tarjeta">
+                        <div class="precio-vehiculo">
+                            <span>Precio</span>
+                            249.000 €
+                        </div>
+                        <button class="boton-detalle">Ver detalle</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tarjeta 6 -->
+            <article class="tarjeta-vehiculo">
+                <div class="contenedor-imagen">
+                    <img class="imagen-vehiculo"
+                        src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=700&q=80"
+                        alt="Aston Martin DB12" loading="lazy" />
+                    <span class="insignia-estado insignia-exclusivo">Exclusivo</span>
+                    <div class="contador-imagenes">
+                        <ion-icon name="image-outline"></ion-icon>
+                        29 fotos
+                    </div>
+                </div>
+                <div class="cuerpo-tarjeta">
+                    <p class="marca-vehiculo">Aston Martin</p>
+                    <h2 class="nombre-vehiculo">DB12 Volante</h2>
+                    <p class="variante-vehiculo">2024 · 800 km · Descapotable</p>
+                    <div class="especificaciones-rapidas">
+                        <div class="item-especificacion">
+                            <span class="valor-especificacion">680</span>
+                            <span class="etiqueta-especificacion">CV</span>
+                        </div>
+                        <div class="item-especificacion">
+                            <span class="valor-especificacion">3,5s</span>
+                            <span class="etiqueta-especificacion">0–100</span>
+                        </div>
+                        <div class="item-especificacion">
+                            <span class="valor-especificacion">320</span>
+                            <span class="etiqueta-especificacion">Km/h máx</span>
+                        </div>
+                    </div>
+                    <div class="pie-tarjeta">
+                        <div class="precio-vehiculo">
+                            <span>Precio</span>
+                            345.000 €
+                        </div>
+                        <button class="boton-detalle">Ver detalle</button>
+                    </div>
+                </div>
+            </article>
+
+        </div><!-- /cuadricula-vehiculos -->
+    </main>
+
+    <!-- BANNER -->
+    <section class="banner-contacto">
+        <h2 class="titulo-banner">¿Buscas un vehículo concreto?</h2>
+        <p class="texto-banner">Nuestro equipo de asesores especializados localiza el automóvil de tus sueños<br>en todo
+            el mundo. Discreción y exclusividad garantizadas.</p>
+        <a href="./contacto.html" class="boton-primario">Contactar con un asesor</a>
+    </section>
+
+    <!-- footer -->
+    <footer class="pie-pagina">
+        © Todos los derechos reservados a Heritage &amp; Horsepower
+    </footer>
+</body>
+
+</html>

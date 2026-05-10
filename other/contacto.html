@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/contacto.css">
+    <link rel="shortcut icon" href="./img/logo.PNG" type="image/x-icon">
+    <!-- Librerias de iconos https://ionic.io/ionicons/usage -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <title>Contáctanos</title>
+</head>
+
+<body>
+    <div id="contenedor">
+        <!-- menu navegacion -->
+    <nav class="barra-navegacion">
+      
+      <div class="contenido-nav">
+        <a href="../index.html" class="logo-nav">
+          <!-- escudo logo-->
+          <img class="escudo-logo" src="../img/logo.PNG" alt="">
+          <span class="nombre-marca">Heritage & Horsepower</span>
+        </a>
+        <ul class="menu-principal">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="./ventas.html">Ventas</a></li>
+          <li><a href="./noticias.html">Noticias</a></li>
+          <li>
+            <a href="#">Sobre Nosotros</a>
+            <ul>
+
+              <li><a href="./opiniones.html">Opiniones</a></li>
+              <li><a href="./contacto.html" class="activo">Contacto</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <div class="iconos-nav">
+          <a href="#"><ion-icon name="search-outline"></ion-icon></a>
+          <a href="./login.html"><ion-icon name="person-outline"></ion-icon></a>
+          <a href="#"><ion-icon name="cart-outline"></ion-icon></a>
+        </div>
+      </div>
+    </nav>
+</div>
+<!-----------------------------------------Apartado de Contacto---------------------------------------------->
+
+<div class="hero">
+  <div class="coche-contenedor">
+  <img src="../img/coche.png" alt="coche" class="imagen1">
+  </div>
+</div>
+
+<!--------------Banner de información------->
+<div class="fotocoche">
+    <h2>ESTAMOS PARA AYUDARTE</h2>
+    <br>
+    <h1><span class="texto-animado">CONTÁCTANOS</span></h1><br>
+    <h2>HABLEMOS DE TU PRÓXIMA LEYENDA</h2>
+    <br>
+
+    <h3>Tienes preguntas, buscas un modelo específico o quieres vender una pieza única?
+        <br>Nuestro equipo de expertos está listo para ayudarte.
+    </h3>
+</div>
+
+
+<!--Parte de Contacto dividido en dos columnas-->
+<!-------------------------------- FORMULARIO CENTRAL -------------------------------->
+
+<div class="FORMULARIO">
+    <!-- Columna izquierda -->
+    <div class="INFORMACIÓN">
+
+        <h2>INFORMACIÓN DE CONTACTO</h2>
+
+        <p><b>Dirección:</b><br>
+        Calle de la Colección, 123<br>
+        28001 Madrid, España</p>
+
+        <p><b>Teléfono:</b><br>
+        +34 912 345 678</p>
+
+        <p><b>Email:</b><br>
+        info@heritagehorsepower.com</p>
+
+        <p><b>Horario:</b><br>
+        Lunes a Viernes: 9:00 - 18:00</p>
+
+    </div>
+
+    <!-- Columna derecha -->
+    <div class="CONTACTO">
+
+        <h2>ENVÍANOS UN MENSAJE</h2>
+        <form>
+            <input type="text" placeholder="Nombre completo" required>
+            <input type="email" placeholder="Correo electrónico" required>
+            <input type="text" placeholder="Teléfono" required>
+            <input type="text" placeholder="Asunto">
+            <textarea placeholder="Escribe tu mensaje"></textarea>
+
+            <br>
+
+            <input type="checkbox"> 
+            <span>Acepto la política de privacidad</span>
+
+            <br><br>
+
+            <input type="submit" value="ENVIAR MENSAJE" class="boton-enviar">
+
+        </form>
+    </div>
+</div>
+
+<!-------------------------------- PREGUNTAS FRECUENTES -------------------------------->
+<div class="contenedor">
+
+    <h1><span class="texto-animado">PREGUNTAS FRECUENTES</span></h1><br>
+
+  <div class="bloque">
+    <input type="checkbox" id="p1" class="oculto">
+    <label for="p1" class="pregunta">¿Qué marcas de coches exclusivos tienen disponibles?</label>
+    <div class="respuesta">En nuestro concesionario trabajamos con una cuidada selección de marcas reconocidas a nivel mundial por su prestigio, diseño, rendimiento y exclusividad. 
+        <br><br>Entre ellas se encuentran Ferrari, Lamborghini, Porsche, Bentley, Rolls-Royce, Mercedes-AMG, BMW M, Audi RS, Maserati, Aston Martin y otras firmas premium. 
+        <br><br>Nuestro stock varía constantemente, por lo que siempre recomendamos contactar con nosotros para conocer las últimas incorporaciones y modelos disponibles.</div>
+  </div>
+
+  <div class="bloque">
+    <input type="checkbox" id="p2" class="oculto">
+    <label for="p2" class="pregunta">¿Los vehículos son nuevos o de segunda mano?</label>
+    <div class="respuesta">Disponemos tanto de vehículos nuevos como de coches seminuevos y de ocasión premium. 
+        <br><br>Todos nuestros vehículos de segunda mano pasan estrictos controles de calidad, revisiones mecánicas completas y comprobaciones de historial para garantizar que se entregan en un estado impecable. 
+        <br><br>Nuestro objetivo es ofrecer la máxima tranquilidad y confianza en cada compra</div>
+  </div>
+
+  <div class="bloque">
+    <input type="checkbox" id="p3" class="oculto">
+    <label for="p3" class="pregunta">¿Todos los coches tienen garantía?</label>
+    <div class="respuesta">Sí, todos nuestros vehículos incluyen garantía. En el caso de coches nuevos, mantienen la garantía oficial del fabricante. 
+        <br><br>En vehículos seminuevos u ocasión, ofrecemos garantía propia o ampliaciones opcionales según el modelo. 
+        <br><br>De esta manera, nuestros clientes compran con total seguridad y respaldo profesional.</div>
+  </div>
+
+  <div class="bloque">
+    <input type="checkbox" id="p4" class="oculto">
+    <label for="p4" class="pregunta">¿Por qué elegirnos para comprar un coche exclusivo??</label>
+    <div class="respuesta">Porque ofrecemos una experiencia premium basada en confianza, transparencia y excelencia. 
+        <br><br>Seleccionamos cuidadosamente cada vehículo, brindamos atención personalizada, máxima discreción y soluciones a medida. 
+        <br><br>Nuestro objetivo no es solo vender un coche, sino superar las expectativas de cada cliente.</div>
+  </div>
+
+
+</div>
+
+
+
+<!-------------------------------- FOOTER -------------------------------->
+
+    <div class="footer">
+        <footer>&copy; TODOS LOS DERECHOS RESERVADOS A HERITAGE & HORSEPOWER</footer>
+    </div>
+</body>
+</html>

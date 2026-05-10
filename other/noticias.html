@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/noticias.css">
+    <!-- linreria iconos -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>Noticias</title>
+</head>
+
+<body>
+
+    <!--menu navegacion -->
+    <nav class="barra-navegacion">
+        <div class="contenido-nav">
+            <a href="../index.html" class="logo-nav">
+                <!-- escudo logo-->
+                <img class="escudo-logo" src="../img/logo.PNG" alt="">
+                <span class="nombre-marca">Heritage & Horsepower</span>
+            </a>
+            <ul class="menu-principal">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./ventas.html">Ventas</a></li>
+                <li><a href="./noticias.html" class="activo">Noticias</a></li>
+                <li>
+                    <a href="#">Sobre Nosotros</a>
+                    <ul>
+
+                        <li><a href="./opiniones.html">Opiniones</a></li>
+                        <li><a href="./contacto.html">Contacto</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="iconos-nav">
+                <a href="#"><ion-icon name="search-outline"></ion-icon></a>
+                <a href="./login.html"><ion-icon name="person-outline"></ion-icon></a>
+                <a href="#"><ion-icon name="cart-outline"></ion-icon></a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Portada Hero -->
+    <header class="portada">
+        <div class="portada-fondo"></div>
+        <div class="portada-contenido">
+            <span class="portada-etiqueta">Bienvenido</span>
+            <h1 class="portada-titulo">
+                ELITE <span>AUTOMOTRIZ,</span><br>EL SIGUIENTE NIVEL
+            </h1>
+            <p class="portada-descripcion">
+                Curaduría técnica de los hiperdeportivos y berlinas más exclusivos del mundo. Un análisis implacable
+                sobre potencia, diseño y el futuro del motor de alto rendimiento.
+            </p>
+            <div class="portada-botones">
+                <a href="./login.html" class="boton-primario">Suscribirse</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección Noticias -->
+    <main>
+        <section class="seccion">
+
+            <div class="seccion-encabezado">
+                <span class="seccion-etiqueta">— Actualidad</span>
+                <h2 class="seccion-titulo">Últimas Noticias</h2>
+                <p class="seccion-subtitulo">Selección editorial de los temas más relevantes de la semana.</p>
+            </div>
+
+            <!-- Noticia destacada -->
+            <article class="noticias-destacada">
+                <div class="noticia-destacada-imagen">
+                    <img src="https://images.unsplash.com/photo-1541348263662-e068662d82af?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Cumbre económica global">
+                    <span class="noticia-destacada-imagen-categoria">Análisis</span>
+                </div>
+                <div class="noticia-destacada-cuerpo">
+                    <div class="noticia-meta">
+                        <span class="noticia-fecha">8 Mayo 2026</span>
+                        <span class="noticia-meta-sep"></span>
+                        <span class="noticia-autor">Por Ana Villanueva</span>
+                    </div>
+                    <h3 class="noticia-destacada-titulo">
+                        AUDI R8 FINAL EDITION: EL ÚLTIMO RUGIDO DEL V12 ATMOSFÉRICO
+                    </h3>
+                    <p class="noticia-destacada-extracto">
+                        La casa de Ingolstadt redefine los límites de la exclusividad con el lanzamiento del R8 'Black
+                        Heritage'. Esta unidad numerada, limitada a solo 10 ejemplares a nivel mundial, combina una
+                        carrocería de fibra de carbono expuesta con una optimización mecánica que alcanza los 640 CV.
+                        Una pieza de colección diseñada para aquellos que entienden que la potencia es, ante todo, un
+                        arte.
+                    </p>
+                    <a href="#" class="noticia-enlace">
+                        Leer artículo completo
+                        <span>→</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Cuadrícula -->
+            <div class="noticias-con-lateral">
+
+                <!-- Noticias principales -->
+                <div class="noticias-principal">
+                    <div class="noticias-cuadricula">
+
+                        <article class="tarjeta-noticia">
+                            <div class="tarjeta-noticia-imagen">
+                                <img src="https://images.unsplash.com/photo-1489686995744-f47e995ffe61?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="Inteligencia Artificial">
+                                <span class="tarjeta-noticia-categoria">Ingeniería</span>
+                            </div>
+                            <div class="tarjeta-noticia-cuerpo">
+                                <div class="tarjeta-noticia-meta">
+                                    <span class="tarjeta-noticia-fecha">7 Mayo 2026</span>
+                                    <span class="tarjeta-noticia-sep"></span>
+                                    <span class="tarjeta-noticia-autor">J. Morales</span>
+                                </div>
+                                <h3 class="tarjeta-noticia-titulo">
+                                    MUSEO MECÁNICO: LA COLECCIÓN PRIVADA MÁS GRANDE DE EUROPA ABRE SUS PUERTAS
+                                </h3>
+                                <p class="tarjeta-noticia-extracto">
+                                    Un búnker arquitectónico en los Alpes suizos alberga ahora 150 piezas únicas, desde
+                                    prototipos de Le Mans hasta unidades personalizadas por departamentos de operaciones
+                                    especiales. Un santuario dedicado a la preservación del patrimonio automotriz.
+                                </p>
+                                <a href="#" class="tarjeta-noticia-enlace">
+                                    Leer más <span>→</span>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="tarjeta-noticia">
+                            <div class="tarjeta-noticia-imagen">
+                                <img src="https://images.unsplash.com/photo-1580912442015-a897bc79f255?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="Cultura y artes">
+                                <span class="tarjeta-noticia-categoria">Exclusivo</span>
+                            </div>
+                            <div class="tarjeta-noticia-cuerpo">
+                                <div class="tarjeta-noticia-meta">
+                                    <span class="tarjeta-noticia-fecha">6 Mayo 2026</span>
+                                    <span class="tarjeta-noticia-sep"></span>
+                                    <span class="tarjeta-noticia-autor">L. Castilla</span>
+                                </div>
+                                <h3 class="tarjeta-noticia-titulo">
+                                    SPIRIT OF ECSTASY: EL RENACIMIENTO DEL LUJO ARTESANAL EN LA ERA ELÉCTRICA
+                                </h3>
+                                <p class="tarjeta-noticia-extracto">
+                                    La firma británica presenta su nueva línea de personalización "Coachbuild", donde
+                                    cada detalle se fabrica a mano durante meses. El lujo silencioso redefine la
+                                    exclusividad con materiales sostenibles y acabados en maderas preciosas nunca antes
+                                    vistas.
+                                </p>
+                                <a href="#" class="tarjeta-noticia-enlace">
+                                    Leer más <span>→</span>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="tarjeta-noticia">
+                            <div class="tarjeta-noticia-imagen">
+                                <img src="https://images.unsplash.com/photo-1681292582809-f5ccba4ba724?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="Alimentación sostenible">
+                                <span class="tarjeta-noticia-categoria">Superdeportivo</span>
+                            </div>
+                            <div class="tarjeta-noticia-cuerpo">
+                                <div class="tarjeta-noticia-meta">
+                                    <span class="tarjeta-noticia-fecha">5 Mayo 2026</span>
+                                    <span class="tarjeta-noticia-sep"></span>
+                                    <span class="tarjeta-noticia-autor">R. Espinosa</span>
+                                </div>
+                                <h3 class="tarjeta-noticia-titulo">
+                                    DOMINIO JAPONÉS: EL "GODZILLA" QUE DESAFÍA LAS LEYES DE LA AERODINÁMICA
+                                </h3>
+                                <p class="tarjeta-noticia-extracto">
+                                    Un preparador de alto nivel revela una versión de 1,200 CV con chasis de fibra de
+                                    carbono integral. Este ejemplar único ha logrado batir el récord de vuelta en
+                                    circuitos de pruebas privados, demostrando que la pasión por la combustión sigue más
+                                    viva que nunca.
+                                </p>
+                                <a href="#" class="tarjeta-noticia-enlace">
+                                    Leer más <span>→</span>
+                                </a>
+                            </div>
+                        </article>
+
+
+                        <!-- Lateral derecho-->
+                        <aside>
+
+                            <p class="lateral-titulo">Recientes</p>
+
+                            <div class="noticia-mini">
+                                <div class="noticia-mini-imagen">
+                                    <img src="https://plus.unsplash.com/premium_photo-1727456263965-aadcf7b4a772?q=80&w=737&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                        alt="Noticia">
+                                </div>
+                                <div class="noticia-mini-cuerpo">
+                                    <p class="noticia-mini-fecha">8 Mayo 2026</p>
+                                    <a href="#" class="noticia-mini-titulo">Ingeniería de Vanguardia: El Legado del Motor en la Era Digital</a>
+                                </div>
+                            </div>
+
+                            <div class="noticia-mini">
+                                <div class="noticia-mini-imagen">
+                                    <img src="https://images.unsplash.com/photo-1584902645120-f86567d892b6?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                        alt="Noticia">
+                                </div>
+                                <div class="noticia-mini-cuerpo">
+                                    <p class="noticia-mini-fecha">7 Mayo 2026</p>
+                                    <a href="#" class="noticia-mini-titulo">Aerodinámica Extrema: La Evolución de las Líneas en los Hypercars Modernos</a>
+                                </div>
+                            </div>
+
+                            <div class="noticia-mini">
+                                <div class="noticia-mini-imagen">
+                                    <img src="https://images.unsplash.com/photo-1570883482089-a3c3f19af2b0?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                        alt="Noticia">
+                                </div>
+                                <div class="noticia-mini-cuerpo">
+                                    <p class="noticia-mini-fecha">6 Mayo 2026</p>
+                                    <a href="#" class="noticia-mini-titulo">Potencia sin Límites: El Rugido de los Motores V12 en la Pista de Pruebas</a>
+                                </div>
+                            </div>
+
+                            <div class="noticia-mini">
+                                <div class="noticia-mini-imagen">
+                                    <img src="https://images.unsplash.com/photo-1577496549804-8b05f1f67338?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                        alt="Noticia">
+                                </div>
+                                <div class="noticia-mini-cuerpo">
+                                    <p class="noticia-mini-fecha">5 Mayo 2026</p>
+                                    <a href="#" class="noticia-mini-titulo">Heritage & Horsepower: Redefiniendo el Lujo sobre Cuatro Ruedas</a>
+                                </div>
+                            </div>
+
+                            <!-- Etiquetas -->
+                            <div class="lateral-etiquetas">
+                                <p class="lateral-titulo">Segmentos Elite</p>
+                                <div class="etiquetas-lista">
+                                    <a href="#" class="etiqueta">Hypercars</a>
+                                    <a href="#" class="etiqueta">Superdeportivos</a>
+                                    <a href="#" class="etiqueta">Ediciones Limitadas</a>
+                                    <a href="#" class="etiqueta">Ingeniería & V12</a>
+                                    <a href="#" class="etiqueta">GT Luxury</a>
+                                    <a href="#" class="etiqueta">Concept Cars</a>
+                                    <a href="#" class="etiqueta">Clásicos de Inversión</a>
+                                    <a href="#" class="etiqueta">Lifestyle Racing</a>
+                                </div>
+                            </div>
+
+                        </aside>
+
+                    </div>
+
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="pie-pagina">
+        © Todos los derechos reservados a Heritage &amp; Horsepower
+    </footer>
+
+</body>
+
+</html>

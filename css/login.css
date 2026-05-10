@@ -1,0 +1,539 @@
+@import url(https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Raleway:wght@300;400;500&display=swap);
+
+/*Cambio de FONT - LUCIA*/
+@font-face {
+  font-family: "carrera";
+  src: url(../fonts/LEMONMILK-Regular.otf);
+}
+
+:root {
+    --negro: #0a0a0a;
+    --gris-oscuro: #111111;
+    --gris-medio: #1c1c1c;
+    --gris-borde: #2a2a2a;
+    --dorado: #c8922a;
+    --dorado-claro: #e0a83a;
+    --blanco: #f5f5f5;
+    --blanco-tenue: #cccccc;
+    --fuente-titulo: 'Cinzel', serif;
+    --fuente-cuerpo: 'Raleway', sans-serif;
+}
+
+/*      reinicio o Reset
+══════════════════════════════*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.body1 {
+    background-image: url(../img/fondo1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: "carrera";
+}
+
+#contenedor {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/*Menu de navegacion*/
+.logo {
+  width: 10%;
+}
+
+.barra-navegacion {
+  background-color: var(--negro);
+  border-bottom: 1px solid var(--gris-borde);
+  padding: 0 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.contenido-nav {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.logo-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.escudo-logo {
+  width: 70px;
+  height: 50px;
+}
+
+.nombre-marca {
+  font-family: var(--fuente-titulo);
+  color: var(--dorado);
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+}
+
+.menu-principal {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+}
+
+.menu-principal a {
+  font-family: var(--fuente-cuerpo);
+  color: var(--blanco-tenue);
+  text-decoration: none;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: color 0.25s;
+}
+
+.menu-principal a:hover,
+.menu-principal a.activo {
+  color: var(--dorado);
+}
+
+.iconos-nav a.activo {
+  color: var(--dorado);
+}
+
+/*     menu desplegable
+══════════════════════════════ */
+.menu-principal li {
+    position: relative;
+}
+
+.menu-principal li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    background-color: var(--gris-borde);
+    border: 1px solid var(--gris-borde);
+    list-style: none;
+    z-index: 101;
+}
+
+.menu-principal li:hover > ul {
+    display: block;
+}
+
+.menu-principal li ul a {
+    display: block;
+    padding: 0.65rem 1.1rem;
+    font-size: 0.78rem;
+    color: var(--blanco-tenue);
+    text-decoration: none;
+    transition: color 0.25s;
+}
+
+.menu-principal li ul a:hover {
+    color: var(--dorado-claro);
+    background-color: var(--gris-medio);
+}
+
+
+/*      iconos de navegacion 
+══════════════════════════════*/
+.iconos-nav {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.iconos-nav a {
+  color: var(--blanco-tenue);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: color 0.25s;
+}
+
+.iconos-nav ion-icon {
+  font-size: 22px;
+}
+
+.iconos-nav a:hover {
+  color: var(--dorado);
+}
+
+/*Estructura dentro divs*/
+/* Caja principal */
+
+.Caja {
+    display: flex; /* Esto alinea Izquierda y Derecha automáticamente */
+    width: 900px;
+    margin: 60px auto; /* Centra la caja horizontalmente */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 35px rgba(196, 194, 189, 0.582);
+    flex: 1;
+}
+
+/* Lado izquierdo */
+.Izquierda {
+    width: 270px; /* 30% de 900px */
+    height: 550px;
+    background: #dbd9d9;
+    float: left;
+    text-align: center;
+    padding-top: 30px;
+    font-family: "carrera";
+
+      font-style: italic;
+
+}
+
+.Icono {
+    font-size: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.Icono img{
+    width: 90px;
+    height: 90px;
+}
+
+.Izquierda input {
+    width: 180px;
+    height: 35px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+}
+
+.Izquierda button {
+    width: 200px;
+    height: 40px;
+    background: #000000;
+    color: white;
+
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.Izquierda button a{
+    text-decoration: none;
+    color: white;
+}
+
+
+.Izquierda button:hover {
+    background-color: #ebb645;
+}
+
+.Links {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.Links a{
+    color: #000000;
+    text-decoration: none;
+}
+
+/* Lado derecho */
+.Derecha {
+    width: 630px;
+    height: 500px;
+    float: left;
+    position: relative;
+}
+
+/* Video */
+.Video {
+    position: absolute;
+    width: 630px;
+    height: 550px;
+    object-fit: cover;
+}
+
+/* Texto encima De El Video*/
+.TextoEncima {
+    position: absolute;
+    top: 350px;
+    left: 80px;
+    color: white;
+}
+
+.TextoEncima h1 {
+    font-size: 40px;
+    margin: 0;
+    font-family: "carrera";
+    color: white;
+}
+
+.TextoEncima p {
+    font-size: 14px;
+    font-family: "carrera";
+    color: white;
+}
+
+.pie-pagina {
+  background-color: var(--negro);
+  border-top: 1px solid var(--gris-borde);
+  text-align: center;
+  padding: 1.25rem 2rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: var(--blanco-tenue);  
+}
+
+/*
+   - movil vertical:      hasta 480px
+   - movil horizontal:    481px – 767px
+   - tablet vertical:        768px – 1023px
+   - tablet horizontal:      1024px – 1299px
+   - escritorio ancho fijo:     >= 1300px
+   =============================================*/
+
+
+/* ──────────────────────────────────────────────
+   movil en vertical  (<= 480px)
+   ────────────────────────────────────────────── */
+@media screen and (max-width: 480px) {
+
+    .contenido-nav {
+        flex-direction: column;
+        height: auto;
+        padding: 0.75rem 1rem;
+        gap: 0.5rem;
+    }
+    .logo-nav { 
+      justify-content: center; 
+    }
+    .escudo-logo { 
+      width: 50px; height: 36px; 
+    }
+    .nombre-marca { 
+      font-size: 0.9rem; 
+    }
+    .menu-principal { 
+      display: none; 
+    }
+    .iconos-nav { 
+      justify-content: center; padding-bottom: 0.4rem; 
+    }
+
+    /* Caja login: columna, ancho completo */
+    .Caja { 
+      flex-direction: column; 
+      width: 80%; 
+      margin: 20% auto; 
+      border-radius: 12px; 
+    }
+
+    .Izquierda { 
+      width: 100%;
+      float: none; 
+      padding: 30px 24px 28px; 
+    }
+
+    .Izquierda input { width: 100%; }
+    .Izquierda button { width: 100%; }
+
+    /* video oculto */
+    .Derecha { display: none; }
+
+    .pie-pagina { 
+      font-size: 0.6rem; 
+      padding: 1rem; 
+    }
+}
+
+
+/* ──────────────────────────────────────────────
+   movil en horizontal  (481px – 767px)
+   ────────────────────────────────────────────── */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+
+    .contenido-nav { 
+      height: 56px; padding: 0 1rem; 
+    }
+    .escudo-logo { 
+      width: 52px; height: 38px; 
+    }
+    .nombre-marca { 
+      font-size: 0.88rem; 
+    }
+    .menu-principal { 
+      gap: 1rem; 
+    }
+    .menu-principal a { 
+      font-size: 0.65rem; letter-spacing: 0.07em; 
+    }
+    .iconos-nav { 
+      gap: 0.85rem; 
+    }
+
+    /* Caja login */
+
+    .Caja { 
+      flex-direction: row; 
+      width: 96%; 
+      margin: 24px auto; 
+    }
+
+    .Izquierda { 
+      width: 240px; 
+      height: 420px; 
+      flex-shrink: 0; 
+      float: none; 
+    }
+    .Izquierda input { width: 160px; }
+    .Izquierda button { width: 180px; }
+
+    .Derecha { 
+      width: auto; 
+      flex: 1; 
+      height: 420px; 
+      float: none; 
+    }
+    .Video { 
+      width: 100%; 
+      height: 420px; 
+    }
+
+    .TextoEncima { top: 260px; left: 20px; }
+    .TextoEncima h1 { font-size: 26px; }
+    .TextoEncima p { font-size: 11px; }
+
+    .pie-pagina { 
+      font-size: 0.62rem; 
+      padding: 1rem 1.5rem; 
+    }
+}
+
+
+/* ──────────────────────────────────────────────
+   tablet en vertical  (768px – 1023px)
+   ────────────────────────────────────────────── */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Navegador */
+    .contenido-nav { 
+      height: 64px; padding: 0 1.5rem; 
+    }
+    .escudo-logo { 
+      width: 62px; height: 44px; 
+    }
+    .menu-principal { 
+      gap: 1.5rem; 
+    }
+    .menu-principal a { 
+      font-size: 0.72rem; 
+    }
+
+    /* Caja login: fila a ancho ajustado */
+    .Caja { 
+      flex-direction: row; 
+      width: 680px; 
+      margin: 50px auto; 
+    }
+
+    .Izquierda { 
+      width: 250px; 
+      height: 520px; 
+      float: none; 
+    }
+    .Izquierda input { 
+      width: 170px; 
+    }
+    .Izquierda button { 
+      width: 190px; 
+    }
+
+    .Derecha { 
+      width: auto; 
+      flex: 1; 
+      height: 520px; 
+      float: none; 
+    }
+    .Video { 
+      width: 100%; 
+      height: 520px; 
+    }
+
+    .TextoEncima { top: 320px; left: 30px; }
+    .TextoEncima h1 { font-size: 30px; }
+}
+
+
+/* ──────────────────────────────────────────────
+   tablet en horizontal  (1024px – 1299px)
+   ────────────────────────────────────────────── */
+@media screen and (min-width: 1024px) and (max-width: 1299px) {
+
+    .contenido-nav { 
+      height: 67px; padding: 0 1.75rem; 
+    }
+    .menu-principal { 
+      gap: 2rem; }
+    .menu-principal a { 
+      font-size: 0.75rem; 
+    }
+
+    /* Caja login Reducida */
+    .Caja { 
+      width: 820px; 
+      margin: 55px auto; 
+    }
+
+    .Izquierda { width: 260px; }
+    .Izquierda input { width: 170px; }
+
+    .Derecha { width: 560px; }
+    .Video { width: 560px; }
+
+    .TextoEncima { 
+      top: 330px; 
+      left: 60px; 
+    }
+    .TextoEncima h1 { font-size: 36px; }
+}
+
+
+/* ──────────────────────────────────────────────
+   escritorio ancho fijo  (>= 1300px)
+   ────────────────────────────────────────────── */
+@media screen and (min-width: 1300px) {
+
+    .Caja { width: 900px; }
+    .Izquierda { 
+      width: 270px; 
+      height: 550px; 
+    }
+    .Derecha { 
+      width: 630px; 
+      height: 550px; 
+    }
+    .Video { 
+      width: 630px; 
+      height: 550px; 
+    }
+    .TextoEncima { 
+      top: 350px; 
+      left: 80px; 
+    }
+    .TextoEncima h1 { font-size: 40px; }
+}

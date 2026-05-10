@@ -1,0 +1,717 @@
+@import url(https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Raleway:wght@300;400;500&display=swap);
+
+/*Cambio de FONT - LUCIA*/
+@font-face {
+  font-family: "carrera";
+  src: url(../fonts/LEMONMILK-Regular.otf);
+}
+
+
+:root {
+  /* Colores principales */
+  --color-principal: #111111;
+  --color-superf-tarjetas: #9b9b9b;
+
+  /* Colores de botones e iconos */
+  --color-efectos: #c1121f;
+  --color-bordes: rgba(252, 230, 110, 0.863);
+  --color-enlaces-y-hovers: #1e5eff;
+
+  /* Colores de textos y titulos */
+  --color-textos-titulos: #f5f5f5;
+  --color-palabras-clave: rgba(250, 214, 95, 0.863);
+  --color-texto-secundario: rgba(245, 245, 245, 0.7);
+
+  --negro: #0a0a0a;
+  --gris-oscuro: #111111;
+  --gris-medio: #1c1c1c;
+  --gris-borde: #2a2a2a;
+  --dorado: #c8922a;
+  --dorado-claro: #e0a83a;
+  --blanco: #f5f5f5;
+  --blanco-tenue: #cccccc;
+  --fuente-titulo: 'Cinzel', serif;
+  --fuente-cuerpo: 'Raleway', sans-serif;
+
+}
+
+
+/* Ajuste global */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-principal);
+  font-family: carrera;
+}
+
+/*Imagen del coche en el encabezado*/
+.imagen1 {
+    position: absolute;   /* Permite moverla con coordenadas */
+    z-index: 10;          /* Asegura que esté por encima de otros elementos */
+    
+    /* Coordenadas para ponerla a la izquierda en el encabezado */
+    top: 150px;            /* Distancia desde el borde superior de .fotocoche */
+    left: 1300px;           /* Distancia desde el borde izquierdo */
+    
+    /* Tamaño de la imagen */
+    width: 500px;         
+    height: auto;
+}
+
+
+/*      Menu de navegacion
+══════════════════════════════ */
+.logo {
+  width: 10%;
+}
+
+.barra-navegacion {
+  background-color: var(--negro);
+  border-bottom: 1px solid var(--gris-borde);
+  padding: 0 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.contenido-nav {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.logo-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.escudo-logo {
+  width: 70px;
+  height: 50px;
+}
+
+.nombre-marca {
+  font-family: var(--fuente-titulo);
+  color: var(--dorado);
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+}
+
+.menu-principal {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+}
+
+.menu-principal a {
+  font-family: var(--fuente-cuerpo);
+  color: var(--blanco-tenue);
+  text-decoration: none;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: color 0.25s;
+}
+
+.menu-principal a:hover,
+.menu-principal a.activo {
+  color: var(--dorado);
+}
+
+/*     menu desplegable
+══════════════════════════════ */
+.menu-principal li {
+    position: relative;
+}
+
+.menu-principal li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    background-color: var(--gris-borde);
+    border: 1px solid var(--gris-borde);
+    list-style: none;
+    z-index: 101;
+}
+
+.menu-principal li:hover > ul {
+    display: block;
+}
+
+.menu-principal li ul a {
+    display: block;
+    padding: 0.65rem 1.1rem;
+    font-size: 0.78rem;
+    color: var(--blanco-tenue);
+    text-decoration: none;
+    transition: color 0.25s;
+}
+
+.menu-principal li ul a:hover {
+    color: var(--dorado-claro);
+    background-color: var(--gris-medio);
+}
+
+
+/*      iconos de navegacion 
+══════════════════════════════*/
+.iconos-nav {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.iconos-nav a {
+  color: var(--blanco-tenue);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: color 0.25s;
+}
+
+.iconos-nav ion-icon {
+  font-size: 22px;
+}
+
+.iconos-nav a:hover {
+  color: var(--dorado);
+}
+
+/*----------------------------Parte de la foto con texto del coche---------------------------------------*/
+/*Efecto de zoom*/
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+.texto-animado {
+  display: inline-block; /* Importante para que el transform funcione bien */
+  animation: zoomIn 3s infinite;
+}
+
+.coche-contenedor {
+  position: absolute;
+  top: -40px;
+  left: -300px;
+}
+
+.fotocoche {
+    background-image: url(../img/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100% auto;
+    height: 250px;
+    padding-top: 40px;
+    padding-left: 30px;
+}
+
+.fotocoche h2{ /*He usado un efecto "zoomin" para que resalte mas a la hora del usuario lo mire*/
+   color: rgba(218, 165, 32, 0.805);
+}
+
+.fotocoche h1{
+   color: whitesmoke;
+
+}
+
+.texto1 {
+animation: zoomIn 1.5s infinite;
+}
+
+.fotocoche h3{
+   color: rgb(181, 180, 180);
+}
+
+
+/*----------------------------Parte del contacto------------------------------------------------------*/
+
+/* ---------------- FORMULARIO CENTRAL ---------------- */
+
+/* Definición de la animación zoomIn */
+
+.FORMULARIO{
+    width: 1200px;
+    min-height: 650px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+/* Columna izquierda */
+.INFORMACIÓN{
+    width: 350px;
+    height: 500px;
+    float: left;
+    padding: 20px;
+    border-right: 1px solid rgba(255,255,255,0.2);
+}
+
+.INFORMACIÓN h2{
+    color: rgba(218, 165, 32, 0.805);
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.INFORMACIÓN p{
+    color: rgb(190,190,190);
+    font-size: 16px;
+    margin-bottom: 35px;
+    line-height: 28px;
+}
+
+/* Columna derecha */
+.CONTACTO{
+    width: 750px;
+    height: 550px;
+    float: left;
+    margin-top: 20px;
+    padding-left: 50px;
+}
+
+.CONTACTO h2{
+    color: rgba(218, 165, 32, 0.805);
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.CONTACTO input[type="text"], input[type="email"]{
+    width: 700px;
+    height: 45px;
+    margin-bottom: 18px;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    color: white;
+    padding-left: 15px;
+    font-size: 15px;
+}
+
+.CONTACTO textarea{
+    width: 700px;
+    height: 140px;
+    margin-bottom: 20px;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    color: white;
+    padding-left: 15px;
+    padding-top: 15px;
+    font-size: 15px;
+    resize: none;
+}
+
+.CONTACTO span{
+    color: rgb(170,170,170);
+    font-size: 14px;
+}
+
+.boton-enviar{
+    width: 220px;
+    height: 50px;
+    background-color: #c1121f;
+    color: white;
+    border: 0px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.boton-enviar:hover{
+    background-color: rgba(218, 165, 32, 0.805);
+}
+
+
+
+/*-----------------------PARTE DE PREGUNTAS FRECUENTES-----------------------*/
+
+/* Caja principal fija*/
+.contenedor {
+  width: 1500px;
+  margin: 45px auto;
+  color: white;
+}
+
+.contenedor h1 {
+  color: rgba(218, 165, 32, 0.805);
+}
+
+/* Cada pregunta tiene su borde y fondo */
+.bloque {
+  border: 1px solid #333;
+  background: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+/* Esconde el cuadrado del checkbox */
+.oculto {
+  display: none;
+}
+
+/* La pregunta es donde haces clic */
+.pregunta {
+  display: block;
+  padding: 20px;
+  cursor: pointer;
+}
+
+/* La respuesta está escondida*/
+.respuesta {
+  display: none;
+  padding: 0 20px 20px 20px;
+  color: #999;
+}
+
+/*Si el botón está marcado, muestra la respuesta */
+.oculto:checked ~ .respuesta {
+  display: block;
+}
+
+/* Cambia el color al abrir para saber qué está activo */
+.oculto:checked ~ .pregunta {
+  color: #c9a55c;
+}
+
+
+/*-- footer --*/
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 15px;
+  text-align: center;
+  padding: 15px;
+  color: var(--color-textos-titulos);
+  font-family: "carrera";
+  font-size: 15px;
+  background-color: var(--color-principal);
+}
+
+/*
+   - movil vertical:      hasta 480px
+   - movil horizontal:    481px – 767px
+   - tablet vertical:        768px – 1023px
+   - tablet horizontal:      1024px – 1299px
+   - escritorio ancho fijo:     >= 1300px
+   =============================================*/
+
+
+/* ──────────────────────────────────────────────
+   movil en vertical  (<= 480px)
+   ────────────────────────────────────────────── */
+@media screen and (max-width: 480px) {
+    .contenido-nav {
+        flex-direction: column;
+        height: auto;
+        padding: 0.75rem 0;
+        gap: 0.6rem;
+    }
+
+    .logo-nav {
+        justify-content: center;
+    }
+
+    .escudo-logo {
+        width: 50px;
+        height: 36px;
+    }
+
+    .nombre-marca {
+        font-size: 0.9rem;
+    }
+
+    /* menu principal */
+    .menu-principal {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        align-items: center;
+    }
+
+    .menu-principal li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-principal a {
+        display: block;
+        padding: 0.5rem 0;
+        font-size: 0.72rem;
+    }
+
+    /* Submenu desplegable */
+    .menu-principal li ul {
+        position: static;
+        min-width: 100%;
+        border: none;
+        background-color: var(--gris-medio);
+    }
+
+    /* Iconos de navegacion */
+    .iconos-nav {
+        justify-content: center;
+        padding: 0.5rem 0;
+    }
+
+    .iconos-nav ion-icon {
+        font-size: 20px;
+    }
+
+    /* imagen coche oculta en móvil */
+    .imagen1 { display: none; }
+
+    /* Banner */
+    .fotocoche { 
+      height: auto; 
+      padding: 30px 20px; 
+      background-size: cover; 
+    }
+    .fotocoche h1 { font-size: 1.4rem; }
+    .fotocoche h2 { font-size: 0.95rem; }
+    .fotocoche h3 { font-size: 0.8rem; }
+
+    /* Formulario: columna única */
+    .FORMULARIO { width: 100%; margin: 20px 0; }
+
+    .INFORMACIÓN {
+        width: 100%;
+        height: auto;
+        float: none;
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+        padding: 20px;
+    }
+
+    .CONTACTO {
+        width: 100%;
+        height: auto;
+        float: none;
+        margin-top: 0;
+        padding: 20px;
+    }
+
+    .CONTACTO input[type="text"],
+    .CONTACTO input[type="email"],
+    .CONTACTO textarea { width: 100%; }
+
+    /* FAQ */
+    .contenedor { 
+      width: 100%; 
+      margin: 30px 0 60px; 
+      padding: 0 20px; 
+    }
+
+    /* footer fijo */
+    .footer { 
+      font-size: 0.6rem; 
+      padding: 1rem; 
+    }
+}
+
+
+/* ──────────────────────────────────────────────
+   movil en horizontal  (481px – 767px)
+   ────────────────────────────────────────────── */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+
+    .contenido-nav { 
+      height: 56px; padding: 0 1rem; 
+    }
+    .escudo-logo { 
+      width: 52px; height: 38px; 
+    }
+    .nombre-marca { 
+      font-size: 0.88rem; 
+    }
+    .menu-principal { 
+      gap: 1rem; 
+    }
+    .menu-principal a { 
+      font-size: 0.65rem; letter-spacing: 0.07em; 
+    }
+    .iconos-nav { 
+      gap: 0.85rem; 
+    }
+
+    /* imagen coche oculta en móvil */
+    .imagen1 { display: none; }
+
+    /* Banner */
+    .fotocoche { 
+      height: auto; 
+      padding: 2rem 1.5rem; 
+      background-size: cover; 
+    }
+    .fotocoche h1 { font-size: 1.6rem; }
+    .fotocoche h2 { font-size: 1rem; }
+
+    /* Formulario */
+    .FORMULARIO { 
+      width: 100%; 
+      margin: 20px 0; 
+    }
+
+    .INFORMACIÓN {
+        width: 100%;
+        height: auto;
+        float: none;
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+        padding: 20px 28px;
+    }
+
+    .CONTACTO {
+        width: 100%;
+        height: auto;
+        float: none;
+        margin-top: 0;
+        padding: 20px 28px;
+    }
+
+    .CONTACTO input[type="text"],
+    .CONTACTO input[type="email"],
+    .CONTACTO textarea { width: 100%; }
+
+    /* FAQ */
+    .contenedor { 
+      width: 100%; 
+      margin: 30px 0 60px; 
+      padding: 0 28px; 
+    }
+
+    .footer { font-size: 11px; }
+}
+
+
+/* ──────────────────────────────────────────────
+   tablet en vertical  (768px – 1023px)
+   ────────────────────────────────────────────── */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Navegador */
+    .contenido-nav { 
+      height: 64px; padding: 0 1.5rem; 
+    }
+    .escudo-logo { 
+      width: 62px; height: 44px; 
+    }
+    .menu-principal { 
+      gap: 1.5rem; 
+    }
+    .menu-principal a { 
+      font-size: 0.72rem; 
+    }
+    /* imagen decorativa: oculta */
+    .imagen1 { display: none; }
+
+    /* Banner */
+    .fotocoche { 
+      height: auto; 
+      padding: 35px 36px; 
+      background-size: cover; 
+    }
+
+    /* Formulario: columna única con más espacio */
+    .FORMULARIO { width: 100%; margin: 20px 0; }
+
+    .INFORMACIÓN {
+        width: 100%;
+        height: auto;
+        float: none;
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+        padding: 24px 36px;
+    }
+
+    .CONTACTO {
+        width: 100%;
+        height: auto;
+        float: none;
+        margin-top: 0;
+        padding: 24px 36px;
+    }
+
+    .CONTACTO input[type="text"],
+    .CONTACTO input[type="email"],
+    .CONTACTO textarea { width: 100%; }
+
+    /* FAQ */
+    .contenedor { width: 100%; margin: 36px 0 60px; padding: 0 36px; }
+}
+
+
+/* ──────────────────────────────────────────────
+   tablet en horizontal  (1024px – 1299px)
+   ────────────────────────────────────────────── */
+@media screen and (min-width: 1024px) and (max-width: 1299px) {
+
+    .contenido-nav { 
+      height: 67px; padding: 0 1.75rem; 
+    }
+    .menu-principal { 
+      gap: 2rem; }
+    .menu-principal a { 
+      font-size: 0.75rem; 
+    }
+
+    /* Imagen decorativa */
+    .imagen1 { 
+      left: 62.5rem; 
+      top: 13.4rem; 
+      width: 18.75rem; 
+    }
+
+    /* Formulario 2 columnas*/
+    .FORMULARIO { width: 960px; }
+
+    .INFORMACIÓN { width: 280px; }
+
+    .CONTACTO {
+        width: 580px;
+        padding-left: 36px;
+    }
+
+    .CONTACTO input[type="text"],
+    .CONTACTO input[type="email"],
+    .CONTACTO textarea { width: 100%; }
+
+    /* FAQ */
+    .contenedor { width: 960px; }
+}
+
+
+/* ──────────────────────────────────────────────
+   escritorio ancho fijo  (>= 1300px)
+   ────────────────────────────────────────────── */
+@media screen and (min-width: 1300px) {
+
+    .FORMULARIO { width: 1200px; }
+    .INFORMACIÓN { width: 350px; }
+    .CONTACTO { width: 750px; padding-left: 50px; }
+
+    .CONTACTO input[type="text"],
+    .CONTACTO input[type="email"],
+    .CONTACTO textarea { width: 700px; }
+
+    .contenedor { width: 1200px; }
+
+    .imagen1 { left: 69.25rem; top: 9.3rem; width: 31.25rem; }
+}

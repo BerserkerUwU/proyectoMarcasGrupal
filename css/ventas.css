@@ -1,0 +1,1009 @@
+@import url(https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Raleway:wght@300;400;500&display=swap);
+
+/* ── Variables globales ── */
+:root {
+    --negro: #0a0a0a;
+    --gris-oscuro: #111111;
+    --gris-medio: #1c1c1c;
+    --gris-borde: #2a2a2a;
+    --dorado: #c8922a;
+    --dorado-claro: #e0a83a;
+    --blanco: #f5f5f5;
+    --blanco-tenue: #cccccc;
+    --fuente-titulo: 'Cinzel', serif;
+    --fuente-cuerpo: 'Raleway', sans-serif;
+}
+
+/*      reinicio o Reset
+══════════════════════════════*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--negro);
+    color: var(--blanco);
+    font-family: var(--fuente-cuerpo);
+}
+
+
+/*      Menu de navegacion
+══════════════════════════════ */
+.logo {
+    width: 10%;
+}
+
+.barra-navegacion {
+    background-color: var(--negro);
+    border-bottom: 1px solid var(--gris-borde);
+    padding: 0 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.contenido-nav {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.logo-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+}
+
+.escudo-logo {
+    width: 70px;
+    height: 50px;
+}
+
+.nombre-marca {
+    font-family: var(--fuente-titulo);
+    color: var(--dorado);
+    font-size: 1.15rem;
+    letter-spacing: 0.04em;
+}
+
+.menu-principal {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+.menu-principal a {
+    font-family: var(--fuente-cuerpo);
+    color: var(--blanco-tenue);
+    text-decoration: none;
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: color 0.25s;
+}
+
+.menu-principal a:hover,
+.menu-principal a.activo {
+    color: var(--dorado);
+}
+
+/*     menu desplegable
+══════════════════════════════ */
+.menu-principal li {
+    position: relative;
+}
+
+.menu-principal li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    background-color: var(--gris-borde);
+    border: 1px solid var(--gris-borde);
+    list-style: none;
+    z-index: 101;
+}
+
+.menu-principal li:hover>ul {
+    display: block;
+}
+
+.menu-principal li ul a {
+    display: block;
+    padding: 0.65rem 1.1rem;
+    font-size: 0.78rem;
+    color: var(--blanco-tenue);
+    text-decoration: none;
+    transition: color 0.25s;
+}
+
+.menu-principal li ul a:hover {
+    color: var(--dorado-claro);
+    background-color: var(--gris-medio);
+}
+
+
+/*      iconos de navegacion 
+══════════════════════════════*/
+.iconos-nav {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+.iconos-nav a {
+    color: var(--blanco-tenue);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color 0.25s;
+}
+
+.iconos-nav ion-icon {
+    font-size: 22px;
+}
+
+.iconos-nav a:hover {
+    color: var(--dorado);
+}
+
+
+
+/*     CABECERA DE SECCIÓN
+══════════════════════════════ */
+.cabecera-ventas {
+    background-color: var(--negro);
+    text-align: center;
+    padding: 5rem 2rem 3rem;
+    position: relative;
+}
+
+.cabecera-ventas::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: var(--dorado);
+    margin: 1.5rem auto 0;
+}
+
+.etiqueta-seccion {
+    font-family: var(--fuente-cuerpo);
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--dorado);
+    margin-bottom: 0.8rem;
+}
+
+.titulo-seccion {
+    font-family: var(--fuente-titulo);
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--blanco);
+}
+
+.subtitulo-seccion {
+    color: var(--blanco-tenue);
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin-top: 1rem;
+    letter-spacing: 0.04em;
+}
+
+/*          FILTROS
+══════════════════════════════ */
+.barra-filtros {
+    background-color: var(--gris-oscuro);
+    border-top: 1px solid var(--gris-borde);
+    border-bottom: 1px solid var(--gris-borde);
+    padding: 1rem 2rem;
+}
+
+.contenido-filtros {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.grupo-filtros {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.boton-filtro {
+    background: transparent;
+    border: 1px solid var(--gris-borde);
+    color: var(--blanco-tenue);
+    font-family: var(--fuente-cuerpo);
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.45rem 1.1rem;
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.boton-filtro:hover,
+.boton-filtro.activo {
+    background: var(--dorado);
+    border-color: var(--dorado);
+    color: var(--negro);
+}
+
+.selector-orden {
+    background: var(--gris-medio);
+    border: 1px solid var(--gris-borde);
+    color: var(--blanco-tenue);
+    font-family: var(--fuente-cuerpo);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    padding: 0.45rem 1rem;
+    cursor: pointer;
+    outline: none;
+}
+
+/* ══════════════════════════════
+       CUADRÍCULA DE VEHÍCULOS
+    ══════════════════════════════ */
+.seccion-catalogo {
+    padding: 3rem 2rem 5rem;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.cuadricula-vehiculos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: flex-start;
+}
+
+/* ── Tarjeta individual ── */
+.tarjeta-vehiculo {
+    width: calc(33.333% - 1rem);
+    min-width: 280px;
+    background-color: var(--gris-oscuro);
+    border: 1px solid var(--gris-borde);
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.tarjeta-vehiculo:hover {
+    border-color: var(--dorado);
+    transform: translateY(-4px);
+}
+
+/* imagen */
+.contenedor-imagen {
+    position: relative;
+    overflow: hidden;
+    height: 210px;
+    background-color: #080808;
+}
+
+.contenedor-imagen ion-icon {
+    color: var(--dorado);
+}
+
+.imagen-vehiculo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    filter: brightness(0.85);
+}
+
+.tarjeta-vehiculo:hover .imagen-vehiculo {
+    transform: scale(1.06);
+    filter: brightness(1);
+}
+
+/* insignia */
+.insignia-estado {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-family: var(--fuente-cuerpo);
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.7rem;
+    font-weight: 600;
+}
+
+.insignia-disponible {
+    background-color: var(--dorado);
+    color: var(--negro);
+}
+
+.insignia-reservado {
+    background-color: #1a1a1a;
+    color: var(--dorado);
+    border: 1px solid var(--dorado);
+}
+
+.insignia-exclusivo {
+    background-color: var(--negro);
+    color: var(--dorado);
+    border: 1px solid var(--dorado);
+}
+
+/* número de imágenes */
+.contador-imagenes {
+    position: absolute;
+    bottom: 0.75rem;
+    right: 0.75rem;
+    background: rgba(0, 0, 0, 0.7);
+    color: var(--blanco-tenue);
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    padding: 0.25rem 0.55rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.contador-imagenes svg {
+    width: 11px;
+    height: 11px;
+    stroke: var(--dorado);
+}
+
+/* cuerpo de tarjeta */
+.cuerpo-tarjeta {
+    padding: 1.25rem 1.4rem 1.4rem;
+}
+
+.marca-vehiculo {
+    font-family: var(--fuente-cuerpo);
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--dorado);
+    margin-bottom: 0.35rem;
+}
+
+.nombre-vehiculo {
+    font-family: var(--fuente-titulo);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--blanco);
+    margin-bottom: 0.15rem;
+    letter-spacing: 0.03em;
+}
+
+.variante-vehiculo {
+    font-size: 0.78rem;
+    color: var(--blanco-tenue);
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+}
+
+/* especificaciones rápidas */
+.especificaciones-rapidas {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--gris-borde);
+    padding-top: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.item-especificacion {
+    text-align: center;
+    flex: 1;
+}
+
+.item-especificacion+.item-especificacion {
+    border-left: 1px solid var(--gris-borde);
+}
+
+.valor-especificacion {
+    display: block;
+    font-family: var(--fuente-titulo);
+    font-size: 0.95rem;
+    color: var(--blanco);
+    letter-spacing: 0.04em;
+}
+
+.etiqueta-especificacion {
+    display: block;
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--blanco-tenue);
+    margin-top: 0.2rem;
+}
+
+/* pie de tarjeta */
+.pie-tarjeta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--gris-borde);
+    padding-top: 1rem;
+}
+
+.precio-vehiculo {
+    font-family: var(--fuente-titulo);
+    font-size: 1.05rem;
+    color: var(--dorado-claro);
+    letter-spacing: 0.04em;
+}
+
+.precio-vehiculo span {
+    font-size: 0.65rem;
+    font-family: var(--fuente-cuerpo);
+    color: var(--blanco-tenue);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.1rem;
+}
+
+.boton-detalle {
+    background: transparent;
+    border: 1px solid var(--dorado);
+    color: var(--dorado);
+    font-family: var(--fuente-cuerpo);
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.boton-detalle:hover {
+    background: var(--dorado);
+    color: var(--negro);
+}
+
+/* ══════════════════════════════
+       BANNER CTA
+    ══════════════════════════════ */
+.banner-contacto {
+    background-color: var(--gris-oscuro);
+    border-top: 1px solid var(--gris-borde);
+    border-bottom: 1px solid var(--gris-borde);
+    padding: 3.5rem 2rem;
+    text-align: center;
+}
+
+.titulo-banner {
+    font-family: var(--fuente-titulo);
+    font-size: clamp(1.3rem, 3vw, 1.9rem);
+    letter-spacing: 0.06em;
+    color: var(--blanco);
+    margin-bottom: 0.75rem;
+}
+
+.texto-banner {
+    color: var(--blanco-tenue);
+    font-size: 0.88rem;
+    font-weight: 300;
+    margin-bottom: 1.75rem;
+    letter-spacing: 0.03em;
+}
+
+.boton-primario {
+    display: inline-block;
+    background: var(--dorado);
+    color: var(--negro);
+    font-family: var(--fuente-cuerpo);
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 0.85rem 2.5rem;
+    cursor: pointer;
+    border: none;
+    transition: background 0.25s;
+    text-decoration: none;
+}
+
+.boton-primario:hover {
+    background: var(--dorado-claro);
+}
+
+/*          Footer
+══════════════════════════════ */
+.pie-pagina {
+    background-color: var(--negro);
+    border-top: 1px solid var(--gris-borde);
+    text-align: center;
+    padding: 1.25rem 2rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--blanco-tenue);
+}
+
+/*
+   - movil vertical:      hasta 480px
+   - movil horizontal:    481px – 767px
+   - tablet vertical:        768px – 1023px
+   - tablet horizontal:      1024px – 1299px
+   - escritorio ancho fijo:     >= 1300px
+   =============================================*/
+
+
+/* ──────────────────────────────────────────────
+   movil en vertical  (<= 480px)
+   ────────────────────────────────────────────── */
+@media screen and (max-width: 480px) {
+    .contenido-nav {
+        flex-direction: column;
+        height: auto;
+        padding: 0.75rem 0;
+        gap: 0.6rem;
+    }
+
+    .logo-nav {
+        justify-content: center;
+    }
+
+    .escudo-logo {
+        width: 50px;
+        height: 36px;
+    }
+
+    .nombre-marca {
+        font-size: 0.9rem;
+    }
+
+    /* menu principal */
+    .menu-principal {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        align-items: center;
+    }
+
+    .menu-principal li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-principal a {
+        display: block;
+        padding: 0.5rem 0;
+        font-size: 0.72rem;
+    }
+
+    /* Submenu desplegable */
+    .menu-principal li ul {
+        position: static;
+        min-width: 100%;
+        border: none;
+        background-color: var(--gris-medio);
+    }
+
+    /* Iconos de navegacion */
+    .iconos-nav {
+        justify-content: center;
+        padding: 0.5rem 0;
+    }
+
+    .iconos-nav ion-icon {
+        font-size: 20px;
+    }
+
+    /* ── Cabecera ── */
+    .cabecera-ventas {
+        padding: 3rem 1.25rem 2rem;
+    }
+
+    .titulo-seccion {
+        font-size: 1.6rem;
+    }
+
+    .subtitulo-seccion {
+        font-size: 0.82rem;
+    }
+
+    /* Filtros */
+    .barra-filtros {
+        padding: 0.85rem 1.25rem;
+    }
+
+    .contenido-filtros {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.6rem;
+    }
+
+    .grupo-filtros {
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    .boton-filtro {
+        width: 100%;
+        text-align: center;
+        padding: 0.55rem 1rem;
+    }
+
+    .selector-orden {
+        width: 100%;
+        padding: 0.55rem 1rem;
+    }
+
+    /* ── Catálogo: una sola columna ── */
+    .seccion-catalogo {
+        padding: 2rem 1.25rem 3rem;
+    }
+
+    .tarjeta-vehiculo {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .contenedor-imagen {
+        height: 190px;
+    }
+
+    /* ── Banner CTA ── */
+    .banner-contacto {
+        padding: 2.5rem 1.25rem;
+    }
+
+    .titulo-banner {
+        font-size: 1.2rem;
+    }
+
+    .texto-banner {
+        font-size: 0.82rem;
+    }
+
+    .boton-primario {
+        padding: 0.75rem 1.75rem;
+        font-size: 0.68rem;
+    }
+
+    /* ── Footer ── */
+    .pie-pagina {
+        font-size: 0.6rem;
+        padding: 1rem;
+    }
+}
+
+
+/* ──────────────────────────────────────────────
+   movil en horizontal  (481px – 767px)
+   ────────────────────────────────────────────── */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+
+    /* Navegación */
+    .contenido-nav {
+        height: 56px;
+        padding: 0 1rem;
+    }
+
+    .escudo-logo {
+        width: 52px;
+        height: 38px;
+    }
+
+    .nombre-marca {
+        font-size: 0.88rem;
+    }
+
+    /* Menu visible*/
+    .menu-principal {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .menu-principal a {
+        font-size: 0.65rem;
+        letter-spacing: 0.07em;
+    }
+
+    .iconos-nav {
+        gap: 0.85rem;
+    }
+
+    .iconos-nav ion-icon {
+        font-size: 19px;
+    }
+
+    /* ── Cabecera más compacta ── */
+    .cabecera-ventas {
+        padding: 2.5rem 1.5rem 1.75rem;
+    }
+
+    .titulo-seccion {
+        font-size: 1.75rem;
+    }
+
+    .subtitulo-seccion {
+        font-size: 0.84rem;
+    }
+
+    .contenido-filtros {
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .grupo-filtros {
+        flex-wrap: wrap;
+        gap: 0.4rem;
+    }
+
+    .boton-filtro {
+        padding: 0.4rem 0.85rem;
+        font-size: 0.68rem;
+    }
+
+    .selector-orden {
+        padding: 0.4rem 0.85rem;
+        font-size: 0.68rem;
+    }
+
+    /* ── Catálogo: 2 columnas aprovechando el ancho horizontal ── */
+    .seccion-catalogo {
+        padding: 1.75rem 1.5rem 3rem;
+    }
+
+    .cuadricula-vehiculos {
+        gap: 1rem;
+    }
+
+    .tarjeta-vehiculo {
+        width: calc(50% - 0.5rem);
+        min-width: unset;
+    }
+
+    .contenedor-imagen {
+        height: 175px;
+    }
+
+    .cuerpo-tarjeta {
+        padding: 1rem 1.1rem 1.1rem;
+    }
+
+    .nombre-vehiculo {
+        font-size: 0.95rem;
+    }
+
+    .variante-vehiculo {
+        font-size: 0.72rem;
+    }
+
+    .valor-especificacion {
+        font-size: 0.85rem;
+    }
+
+    .etiqueta-especificacion {
+        font-size: 0.55rem;
+    }
+
+    .precio-vehiculo {
+        font-size: 0.9rem;
+    }
+
+    .boton-detalle {
+        font-size: 0.6rem;
+        padding: 0.45rem 0.8rem;
+    }
+
+    /* ── Banner CTA ── */
+    .banner-contacto {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .titulo-banner {
+        font-size: 1.3rem;
+    }
+
+    .texto-banner {
+        font-size: 0.84rem;
+    }
+
+    /* ── Footer ── */
+    .pie-pagina {
+        font-size: 0.62rem;
+        padding: 1rem 1.5rem;
+    }
+}
+
+
+/* ──────────────────────────────────────────────
+   tablet en vertical  (768px – 1023px)
+   ────────────────────────────────────────────── */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    /* ── Navegación ── */
+    .contenido-nav {
+        height: 64px;
+        padding: 0 1.5rem;
+    }
+
+    .escudo-logo {
+        width: 62px;
+        height: 44px;
+    }
+
+    .nombre-marca {
+        font-size: 1rem;
+    }
+
+    .menu-principal {
+        gap: 1.5rem;
+    }
+
+    .menu-principal a {
+        font-size: 0.72rem;
+        letter-spacing: 0.09em;
+    }
+
+    .iconos-nav {
+        gap: 1rem;
+    }
+
+    .iconos-nav ion-icon {
+        font-size: 21px;
+    }
+
+    /* ── Cabecera ── */
+    .cabecera-ventas {
+        padding: 4rem 2rem 2.5rem;
+    }
+
+    .titulo-seccion {
+        font-size: 2.2rem;
+    }
+
+    /* ── Filtros ── */
+    .barra-filtros {
+        padding: 0.9rem 1.75rem;
+    }
+
+    .contenido-filtros {
+        flex-wrap: wrap;
+        gap: 0.6rem;
+    }
+
+    .boton-filtro {
+        padding: 0.45rem 1rem;
+        font-size: 0.7rem;
+    }
+
+    /* ── Catálogo: 2 columnas equilibradas ── */
+    .seccion-catalogo {
+        padding: 2.5rem 1.75rem 4rem;
+    }
+
+    .cuadricula-vehiculos {
+        gap: 1.25rem;
+    }
+
+    .tarjeta-vehiculo {
+        width: calc(50% - 0.625rem);
+        min-width: unset;
+    }
+
+    .contenedor-imagen {
+        height: 200px;
+    }
+
+    /* ── Banner CTA ── */
+    .banner-contacto {
+        padding: 3rem 2rem;
+    }
+
+    /* ── Footer ── */
+    .pie-pagina {
+        font-size: 0.66rem;
+        padding: 1.1rem 1.75rem;
+    }
+}
+
+
+/* ──────────────────────────────────────────────
+   tablet en horizontal  (1024px – 1299px)
+   ────────────────────────────────────────────── */
+@media screen and (min-width: 1024px) and (max-width: 1299px) {
+
+    /* ── Navegación ── */
+    .contenido-nav {
+        height: 67px;
+        padding: 0 1.75rem;
+    }
+
+    .escudo-logo {
+        width: 66px;
+        height: 47px;
+    }
+
+    .nombre-marca {
+        font-size: 1.08rem;
+    }
+
+    .menu-principal {
+        gap: 2rem;
+    }
+
+    .menu-principal a {
+        font-size: 0.75rem;
+    }
+
+    .iconos-nav ion-icon {
+        font-size: 21px;
+    }
+
+    /* ── Cabecera ── */
+    .cabecera-ventas {
+        padding: 4.5rem 2rem 2.75rem;
+    }
+
+    /* ── Filtros ── */
+    .barra-filtros {
+        padding: 1rem 1.75rem;
+    }
+
+    /* ── Catálogo: 3 columnas ajustadas al ancho disponible ── */
+    .seccion-catalogo {
+        padding: 2.75rem 1.75rem 4.5rem;
+    }
+
+    .cuadricula-vehiculos {
+        gap: 1.25rem;
+    }
+
+    .tarjeta-vehiculo {
+        width: calc(33.333% - 0.84rem);
+        min-width: unset;
+    }
+
+    .contenedor-imagen {
+        height: 200px;
+    }
+
+    /* ── Banner CTA ── */
+    .banner-contacto {
+        padding: 3.25rem 2rem;
+    }
+
+    /* ── Footer ── */
+    .pie-pagina {
+        font-size: 0.68rem;
+    }
+}
+
+
+/* ──────────────────────────────────────────────
+   escritorio ancho fijo  (>= 1300px)
+   ────────────────────────────────────────────── */
+@media screen and (min-width: 1300px) {
+
+    .tarjeta-vehiculo {
+        width: calc(33.333% - 1rem);
+    }
+
+    .contenedor-imagen {
+        height: 210px;
+    }
+}

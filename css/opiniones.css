@@ -1,0 +1,595 @@
+@import url(https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Raleway:wght@300;400;500&display=swap);
+
+/*Cambio de FONT - LUCIA*/
+@font-face {
+  font-family: "carrera";
+  src: url(../fonts/LEMONMILK-Regular.otf);
+}
+
+:root {
+  --negro: #0a0a0a;
+  --gris-oscuro: #111111;
+  --gris-medio: #1c1c1c;
+  --gris-borde: #2a2a2a;
+  --dorado: #c8922a;
+  --dorado-claro: #e0a83a;
+  --blanco: #f5f5f5;
+  --blanco-tenue: #cccccc;
+  --fuente-titulo: 'Cinzel', serif;
+  --fuente-cuerpo: 'Raleway', sans-serif;
+}
+
+body {
+  background-color: var(--color-principal);
+  font-family: carrera;
+}
+
+/* Ajuste global */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*      Menu de navegacion
+══════════════════════════════ */
+.logo {
+  width: 10%;
+}
+
+.barra-navegacion {
+  background-color: var(--negro);
+  border-bottom: 1px solid var(--gris-borde);
+  padding: 0 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.contenido-nav {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.logo-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.escudo-logo {
+  width: 70px;
+  height: 50px;
+}
+
+.nombre-marca {
+  font-family: var(--fuente-titulo);
+  color: var(--dorado);
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+}
+
+.menu-principal {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+}
+
+.menu-principal a {
+  font-family: var(--fuente-cuerpo);
+  color: var(--blanco-tenue);
+  text-decoration: none;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: color 0.25s;
+}
+
+.menu-principal a:hover,
+.menu-principal a.activo {
+  color: var(--dorado);
+}
+
+/*     menu desplegable
+══════════════════════════════ */
+.menu-principal li {
+    position: relative;
+}
+
+.menu-principal li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    background-color: var(--gris-borde);
+    border: 1px solid var(--gris-borde);
+    list-style: none;
+    z-index: 101;
+}
+
+.menu-principal li:hover > ul {
+    display: block;
+}
+
+.menu-principal li ul a {
+    display: block;
+    padding: 0.65rem 1.1rem;
+    font-size: 0.78rem;
+    color: var(--blanco-tenue);
+    text-decoration: none;
+    transition: color 0.25s;
+}
+
+.menu-principal li ul a:hover {
+    color: var(--dorado-claro);
+    background-color: var(--gris-medio);
+}
+
+
+/*      iconos de navegacion 
+══════════════════════════════*/
+.iconos-nav {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.iconos-nav a {
+  color: var(--blanco-tenue);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: color 0.25s;
+}
+
+.iconos-nav ion-icon {
+  font-size: 22px;
+}
+
+.iconos-nav a:hover {
+  color: var(--dorado);
+}
+
+
+/*Opiniones*/
+.seccion-opiniones {
+  background-color: #0a0a0a;
+  padding: 80px 40px;
+  font-family: Georgia, serif;
+  color: #ffffff;
+}
+
+.cabecera-opiniones {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.etiqueta-exclusiva {
+  letter-spacing: 4px;
+  font-size: 12px;
+  color: #c9a84c;
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.titulo-opiniones {
+  font-size: 42px;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0 0 18px 0;
+  font-style: italic;
+}
+
+.subtitulo-opiniones {
+  font-size: 15px;
+  color: #888888;
+  font-family: Arial, sans-serif;
+  margin: 0 0 24px 0;
+}
+
+.separador-dorado {
+  width: 60px;
+  height: 2px;
+  background-color: #c9a84c;
+  margin: 0 auto;
+}
+
+.contenedor-tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.tarjeta-opinion {
+  background-color: #111111;
+  border: 1px solid #2a2a2a;
+  padding: 32px 28px;
+  width: 280px;
+  position: relative;
+}
+
+.tarjeta-opinion:hover {
+  border-color: #c9a84c;
+}
+
+.comilla-decorativa {
+  font-size: 64px;
+  color: #c9a84c;
+  line-height: 1;
+  font-family: Georgia, serif;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.texto-opinion {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #cccccc;
+  font-family: Arial, sans-serif;
+  margin: 0 0 28px 0;
+  font-style: italic;
+}
+
+.estrellas {
+  color: #c9a84c;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.separador-tarjeta {
+  width: 100%;
+  height: 1px;
+  background-color: #2a2a2a;
+  margin-bottom: 20px;
+}
+
+.datos-cliente {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.avatar-cliente {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #c9a84c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: bold;
+  color: #0a0a0a;
+  font-family: Arial, sans-serif;
+  flex-shrink: 0;
+}
+
+.info-cliente {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.nombre-cliente {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.vehiculo-comprado {
+  font-size: 12px;
+  color: #c9a84c;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.etiqueta-verificado {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 10px;
+  color: #666666;
+  font-family: Arial, sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.punto-verificado {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #4caf50;
+  display: inline-block;
+}
+
+.resumen-estadisticas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0;
+  margin-top: 60px;
+  border-top: 1px solid #2a2a2a;
+  border-bottom: 1px solid #2a2a2a;
+  padding: 40px 0;
+}
+
+.estadistica-item {
+  text-align: center;
+  padding: 0 48px;
+  border-right: 1px solid #2a2a2a;
+}
+
+.estadistica-item:last-child {
+  border-right: none;
+}
+
+.numero-estadistica {
+  font-size: 36px;
+  color: #c9a84c;
+  font-family: Georgia, serif;
+  font-style: italic;
+  margin: 0 0 6px 0;
+}
+
+.label-estadistica {
+  font-size: 11px;
+  color: #888888;
+  font-family: Arial, sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.pie-pagina {
+  background-color: var(--negro);
+  border-top: 1px solid var(--gris-borde);
+  text-align: center;
+  padding: 1.25rem 2rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blanco-tenue);
+}
+
+/*
+   - movil vertical:      hasta 480px
+   - movil horizontal:    481px – 767px
+   - tablet vertical:        768px – 1023px
+   - tablet horizontal:      1024px – 1299px
+   - escritorio ancho fijo:     >= 1300px
+   =============================================*/
+
+
+/* ──────────────────────────────────────────────
+   movil en vertical  (<= 480px)
+   ────────────────────────────────────────────── */
+@media screen and (max-width: 480px) {
+    .contenido-nav {
+        flex-direction: column;
+        height: auto;
+        padding: 0.75rem 0;
+        gap: 0.6rem;
+    }
+
+    .logo-nav {
+        justify-content: center;
+    }
+
+    .escudo-logo {
+        width: 50px;
+        height: 36px;
+    }
+
+    .nombre-marca {
+        font-size: 0.9rem;
+    }
+
+    /* menu principal */
+    .menu-principal {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        align-items: center;
+    }
+
+    .menu-principal li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-principal a {
+        display: block;
+        padding: 0.5rem 0;
+        font-size: 0.72rem;
+    }
+
+    /* Submenu desplegable */
+    .menu-principal li ul {
+        position: static;
+        min-width: 100%;
+        border: none;
+        background-color: var(--gris-medio);
+    }
+
+    /* Iconos de navegacion */
+    .iconos-nav {
+        justify-content: center;
+        padding: 0.5rem 0;
+    }
+
+    .iconos-nav ion-icon {
+        font-size: 20px;
+    }
+  
+    .seccion-opiniones { 
+      padding: 50px 20px; 
+    }
+    .titulo-opiniones { 
+      font-size: 26px; 
+    }
+
+    .tarjeta-opinion {
+        width: 100%;
+        padding: 24px 20px;
+    }
+
+    .numero-estadistica { 
+      font-size: 28px; 
+    }
+
+    .pie-pagina { 
+      font-size: 0.6rem; 
+      padding: 1rem; 
+    }
+}
+
+
+/* ──────────────────────────────────────────────
+   movil en horizontal  (481px – 767px)
+   ────────────────────────────────────────────── */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+
+    .contenido-nav { 
+      height: 56px; padding: 0 1rem; 
+    }
+    .escudo-logo { 
+      width: 52px; height: 38px; 
+    }
+    .nombre-marca { 
+      font-size: 0.88rem; 
+    }
+    .menu-principal { 
+      gap: 1rem; 
+    }
+    .menu-principal a { 
+      font-size: 0.65rem; letter-spacing: 0.07em; 
+    }
+    .iconos-nav { 
+      gap: 0.85rem; 
+    }
+    .seccion-opiniones { 
+      padding: 50px 24px; 
+    }
+    .titulo-opiniones { 
+      font-size: 28px; 
+    }
+    /* 2 tarjetas por fila */
+    .tarjeta-opinion { 
+      width: calc(50% - 12px); 
+    }
+    .numero-estadistica { 
+
+      font-size: 28px; 
+    }
+    .estadistica-item { 
+      padding: 0 28px; 
+    }
+    .pie-pagina { 
+      font-size: 0.62rem; 
+      padding: 1rem 1.5rem; 
+    }
+}
+
+
+/* ──────────────────────────────────────────────
+   tablet en vertical  (768px – 1023px)
+   ────────────────────────────────────────────── */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Navegador */
+    .contenido-nav { 
+      height: 64px; padding: 0 1.5rem; 
+    }
+    .escudo-logo { 
+      width: 62px; height: 44px; 
+    }
+    .menu-principal { 
+      gap: 1.5rem; 
+    }
+    .menu-principal a { 
+      font-size: 0.72rem; 
+    }
+
+    .seccion-opiniones { 
+      padding: 60px 32px; 
+    }
+    .titulo-opiniones { 
+      font-size: 34px; 
+    }
+
+    /* 2 tarjetas por fila*/
+    .tarjeta-opinion { 
+      width: calc(50% - 12px); 
+    }
+
+    .estadistica-item { 
+      padding: 0 32px; 
+    }
+    .numero-estadistica { 
+      font-size: 30px; 
+    }
+}
+
+
+/* ──────────────────────────────────────────────
+   tablet en horizontal  (1024px – 1299px)
+   ────────────────────────────────────────────── */
+@media screen and (min-width: 1024px) and (max-width: 1299px) {
+
+    .contenido-nav { 
+      height: 67px; padding: 0 1.75rem; 
+    }
+    .menu-principal { 
+      gap: 2rem; }
+    .menu-principal a { 
+      font-size: 0.75rem; 
+    }
+    .seccion-opiniones { 
+      padding: 70px 36px; 
+    }
+    .titulo-opiniones { 
+      font-size: 38px; 
+    }
+    /* 4 tarjetas en fila*/
+    .tarjeta-opinion { 
+      width: 220px; 
+    }
+    .estadistica-item { 
+      padding: 0 38px; 
+    }
+    .numero-estadistica { 
+      font-size: 33px; 
+    }
+}
+
+
+/* ──────────────────────────────────────────────
+   escritorio ancho fijo  (>= 1300px)
+   ────────────────────────────────────────────── */
+@media screen and (min-width: 1300px) {
+
+    .tarjeta-opinion { 
+      width: 280px; 
+    }
+    .numero-estadistica { 
+      font-size: 36px; 
+    }
+}
